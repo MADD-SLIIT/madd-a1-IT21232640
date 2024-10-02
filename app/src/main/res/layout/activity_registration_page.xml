@@ -181,7 +181,7 @@
         android:contentDescription="Sign up with Apple"/>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/askToLogText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
