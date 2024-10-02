@@ -135,7 +135,8 @@
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:srcCompat="@drawable/facebook" />
+        app:srcCompat="@drawable/facebook"
+        android:contentDescription="Sign in with Facebook"/>
 
     <ImageButton
         android:id="@+id/googleLogin"
@@ -147,7 +148,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/google" />
+        app:srcCompat="@drawable/google"
+        android:contentDescription="Sign in with Google"/>
 
     <ImageButton
         android:id="@+id/appleLogin"
@@ -160,7 +162,8 @@
         app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2"
-        app:srcCompat="@drawable/apple" />
+        app:srcCompat="@drawable/apple"
+        android:contentDescription="Sign in with Apple"/>
 
     <TextView
         android:id="@+id/textView4"
