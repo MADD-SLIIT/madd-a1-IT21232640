@@ -1,7 +1,13 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
+}
+buildscript {
+    dependencies {
+        classpath ("com.android.tools.build:gradle:8.2.0")// Example version
+    }
 }
 
 android {
@@ -43,19 +49,25 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.database.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.firebase.firestore.ktx)
+    dependencies {
+        implementation(libs.androidx.core.ktx)
+        implementation(libs.androidx.appcompat)
+        implementation(libs.material)
+        implementation(libs.androidx.activity)
+        implementation(libs.androidx.constraintlayout)
+        implementation(libs.androidx.navigation.fragment.ktx)
+        implementation(libs.androidx.navigation.ui.ktx)
+        implementation(libs.firebase.auth.ktx)
+        implementation(libs.firebase.database.ktx)
+        testImplementation(libs.junit)
+        androidTestImplementation(libs.androidx.junit)
+        androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
-    implementation("com.google.firebase:firebase-analytics")
+        implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+        implementation("com.google.firebase:firebase-analytics")
+        // Remove the old support library
+        // implementation ("com.android.support:appcompat-v7:28.0.0")
+    }
+
 }
