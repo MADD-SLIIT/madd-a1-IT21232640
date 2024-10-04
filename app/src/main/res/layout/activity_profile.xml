@@ -56,20 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Phone Number"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/profileUserName" />
 
     <TextView
         android:id="@+id/textView47"
@@ -82,10 +69,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/profileUserName"
         android:layout_width="345dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -100,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/profileEmail"
         android:layout_width="345dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -115,22 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
     <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="345dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/custom_input"
-        android:ems="10"
-        android:padding="10dp"
-        android:hint="Phone  Number"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView46" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/profilePassword"
         android:layout_width="345dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -145,7 +117,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/profileUpdateButton"
         android:layout_width="345dp"
         android:layout_height="56dp"
         android:layout_marginTop="68dp"
@@ -155,10 +127,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/profilePassword" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/profileDeleteButton"
         android:layout_width="345dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
@@ -169,6 +141,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/profileUpdateButton"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

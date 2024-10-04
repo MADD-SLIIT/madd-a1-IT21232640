@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hotelBooking">
+
+    <EditText
+        android:id="@+id/bookingName"
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Enter Your Name"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/bookingPhoneNumber"
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Enter Your Phone Number"
+        android:inputType="phone"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingNumPerson" />
+
+    <EditText
+        android:id="@+id/bookingDate"
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Booking Date"
+        android:inputType="date"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingPhoneNumber" />
+
+    <EditText
+        android:id="@+id/bookingTime"
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Booking Time"
+        android:inputType="time"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingDate" />
+
+    <Button
+        android:id="@+id/bookButton"
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/custom_button"
+        android:text="Book Now"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingTime" />
+
+    <EditText
+        android:id="@+id/bookingNumPerson"
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Number of Persons"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

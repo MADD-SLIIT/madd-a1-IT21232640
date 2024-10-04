@@ -42,12 +42,10 @@ class loginPage : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Sign in success, navigate to home page
                         val intent = Intent(this, Home::class.java) // Replace with your HomePage class
                         startActivity(intent)
                         finish() // Close the login page
                     } else {
-                        // If sign in fails, display a message to the user
                         Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
                     }
                 }
