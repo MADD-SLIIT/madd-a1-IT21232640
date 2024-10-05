@@ -73,6 +73,10 @@ dependencies {
         implementation("com.google.firebase:firebase-analytics")
         implementation ("androidx.recyclerview:recyclerview:1.2.1")
 
+        implementation ("com.google.firebase:firebase-auth-ktx:21.0.1") // Or latest version
+        implementation ("com.google.firebase:firebase-database-ktx:20.3.0") // Or latest version
+
+
 
         // Remove the old support library
         // implementation ("com.android.support:appcompat-v7:28.0.0")
