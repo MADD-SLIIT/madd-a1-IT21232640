@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
     dependencies {
         implementation(libs.androidx.core.ktx)
         implementation(libs.androidx.appcompat)
@@ -70,6 +71,9 @@ dependencies {
 
         implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
         implementation("com.google.firebase:firebase-analytics")
+        implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+
         // Remove the old support library
         // implementation ("com.android.support:appcompat-v7:28.0.0")
     }

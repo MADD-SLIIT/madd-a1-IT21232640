@@ -6,26 +6,32 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ReviewAdapter(private val data: List<ReviewItem>) : RecyclerView.Adapter<ReviewAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val reviewText: TextView = itemView.findViewById(R.id.reviewText)
-        val reviewRating: TextView = itemView.findViewById(R.id.reviewRating)
+import android.widget.RatingBar
+
+
+
+
+class ReviewAdapter(private val reviewList: List<Review>) : RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
+        val itemView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.review_item, parent, false)
+        return ReviewViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.review_item, parent, false)
-        return ViewHolder(view)
+    override fun onBindViewHolder(holder: ReviewViewHolder, position: Int) {
+        val currentReview = reviewList[position]
+        holder.reviewTextView.text = currentReview.reviewText
+        holder.ratingBar.rating = currentReview.ratingValue
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val review = data[position]
-        holder.reviewText.text = review.comment
-        holder.reviewRating.text = review.rating.toString()
+    override fun getItemCount(): Int {
+        return reviewList.size
     }
 
-    override fun getItemCount(): Int = data.size
+    class ReviewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val reviewTextView: TextView = itemView.findViewById(R.id.reviewText)
+        val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
+    }
 }
-
-// Renamed data class to avoid naming conflicts
-data class ReviewItem(val comment: String, val rating: Float)
