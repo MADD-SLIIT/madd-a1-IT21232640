@@ -7,24 +7,29 @@
         android:id="@+id/confirmationTextView"
         android:layout_width="match_parent"
         android:layout_height="103dp"
+        android:layout_marginTop="250dp"
         android:padding="16dp"
         android:textColor="#000"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/comUpbtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="120dp"
-        android:text="Update" />
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/custom_button"
+        android:text="Update"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/comDelebtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:layout_marginLeft="20dp"
-        android:text="Delete" />
+        android:layout_width="345dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="460dp"
+        android:background="@drawable/custom_delete"
+        android:text="Delete"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
