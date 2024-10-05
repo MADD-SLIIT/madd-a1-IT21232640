@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,8 +13,16 @@
         android:theme="@style/Theme.MyApplication1">
 
         <activity
+            android:name=".ReviewConfirmation"
+            android:exported="false" />
+
+        <activity
+            android:name=".AllFeedback"
+            android:exported="false" />  <!-- Good: Internal use only -->
+
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true">  <!-- Correct: Main entry point of the app -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,28 +31,31 @@
 
         <activity
             android:name=".Home"
-            android:exported="true"/> <!-- Ensure this is correct based on your requirements -->
+            android:exported="true" />  <!-- Ensure this is correct based on your requirements -->
 
         <activity
             android:name=".registrationPage"
-            android:exported="false"/> <!-- Exported should be set based on whether you want it accessible to other apps -->
+            android:exported="false" />  <!-- Good: Internal use only -->
 
         <activity
             android:name=".loginPage"
-            android:exported="false"/>
+            android:exported="false" />  <!-- Good: Internal use only -->
 
         <activity
             android:name=".Profile"
-            android:exported="false"/>
+            android:exported="false" />  <!-- Good: Internal use only -->
 
         <activity
             android:name=".HotelView"
-            android:exported="false"/>
+            android:exported="false" />  <!-- Good: Internal use only -->
 
         <activity
             android:name=".hotelBooking"
-            android:exported="false"/>
+            android:exported="false" />  <!-- Good: Internal use only -->
+
+        <activity
+            android:name=".ReviewPage"
+            android:exported="false" />  <!-- Should be false, as it is used for submitting/reviewing -->
 
     </application>
-
 </manifest>
